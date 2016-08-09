@@ -1,10 +1,10 @@
-class User1
+class User
   def initialize(name)
     @name = name
   end
 end
 
-class Follower < User1
+class Follower < User
   def initialize(name, following)
     @following = following
     super(name)
