@@ -16,4 +16,4 @@ class Follower < User1
 end
 
 follower = Follower.new("Oprah", "aplusk")
-follower.relationship
+puts follower.relationship
