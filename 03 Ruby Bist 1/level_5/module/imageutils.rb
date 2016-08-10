@@ -1,8 +1,8 @@
 module ImageUtils
-
-  def preview(image)
+  def preview
   end
 
   def transfer(destination)
   end
 end
+
