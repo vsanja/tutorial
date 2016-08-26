@@ -1,0 +1,106 @@
+<h1>Listing tweets</h1>
+<table>
+  <tr>
+    <th>Status</th>
+    <th>Zombie</th>
+  </tr>
+  <% tweets = Tweet.all %>
+  <% tweets.all.each do |tweet| %>
+      <tr>
+        <td><%= link_to tweet.status, tweet %></td>
+        <td><%= link_to tweet.zombie.name, tweet.Zombie %> </td>
+        <td><%= link_to "Edit", edit_tweet_path(tweet) %> </td>
+        <td><%= link_to "Delete", tweet, :method => :delete %> </td>
+      </tr>
+  <% end %>
+  <% if tweets.size == 0 %>
+      <em>No tweets found</em>
+  <% end %>
+  <% if tweets.empty? %>
+      <em>No tweets found</em>
+  <% end %>
+</table>
+
+<%= link_to "text", code %>
+code =
+tweets_path					= /tweets
+new_tweet_path				= /tweets/new
+tweet 						= /tweets/1
+edit_tweet_path(tweet) 		= /tweets/1/edit
+tweet, :method => :Delete 	= /tweets/1
+
+<h1><%= zombie.name %></h1>
+
+<p>
+  <%= zombie.graveyard %>
+</p>
+<p>
+  <%= link_to zombie.name, zombie %>
+</p>
+
+<ul>
+  <% zombies.each do |zombie| %>
+      <%= zombie.name %>
+  <% end %>
+</ul>
+
+<ul>
+  <% zombies.each do |zombie| %>
+      <li>
+        <%= zombie.name %>
+        <% if zombie.tweets.count > 1 %>
+            <P>SMART ZOMBIE</P>
+        <% end %>
+      </li>
+  <% end %>
+</ul>
+
+<ul>
+  <% zombies.each do |zombie| %>
+      <li>
+        <%= link_to zombie.name, edit_zombie_path(zombie) %>
+      </li>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

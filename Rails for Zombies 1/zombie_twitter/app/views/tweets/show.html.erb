@@ -1,0 +1,7 @@
+<% tweet = Tweet.find(1) %>
+<%= tweet.status %>
+<p>Posted by <%= tweet.zombie.name %></p>
+
+
+<p>Posted by <%= link_to tweet.zombie.name, zombie_path(tweet.zombie) %></p>
+<p>Posted by <%= link_to tweet.zombie.name, tweet.zombie %></p>
