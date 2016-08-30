@@ -1,9 +1,10 @@
+#
 class Attachment
   def file_path
     @file_path = []
   end
   def post
-    puts 'file_path excists'
+    puts 'file_path exsists'
   end
 end
 

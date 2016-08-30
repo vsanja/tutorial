@@ -1,7 +1,5 @@
-def list_url(user_name, list_name)
-  if list_name
-    "https://twitter.com/#{user_name}/#{list_name}"
-  else
-    "https://twitter.com/#{user_name}"
-  end
-end
+options[:path] = if list_name
+                   "/#{user_name}/#{list_name}"
+                 else
+                   "/#{user_name}"
+                 end

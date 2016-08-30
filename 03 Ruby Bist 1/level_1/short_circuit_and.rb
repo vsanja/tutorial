@@ -14,3 +14,5 @@ matched_games = games.grep(Regexp.new(search))
 if matched_games.length > 0 && matched_games.include?(search)
   puts "Game #{search} found."
 end
+    if user && user.signed_in?
+      puts "user's name"
